@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Índice IPEA</title>
+</head>
+<body>
+    <h1>Calculadora Índice IPEA</h1>
+    <br>
+    <label for="idmes">Selecione o Mês: </label>
+    <input type="month" name="namemes" id="idmes">
+    <br>
+    <br>
+    <label for="idvalor">Coloque o valor: </label>
+    <input type="number" name="namevalor" id="idvalor">
+    <br>
+    <br>
+    <input type="submit" value="Enviar" onclick="processarData()">
+    <br>
+    <p>O valor corrigido é: </p>
+    <p id="idresultado"></p>
+</body>
+<script>
+    function processarData(){
+        let dataInput = document.getElementById("idmes").value;
+        let valorIPEA;
+        console.log(typeof(dataInput));
+        switch (dataInput){
+            case "2022-01":
+                valorIPEA = 170.24;
+                break;
+            case "2022-02":
+                valorIPEA = 171.51;
+                break;
+            case "2022-03":
+                valorIPEA = 172.28;
+                break;
+            case "2022-04":
+                valorIPEA = 173.52;
+                break;
+            case "2022-05":
+                valorIPEA = 174.58;
+                break;
+            case "2022-06":
+                valorIPEA = 175.81;
+                break;
+            case "2022-07":
+                valorIPEA = 176.43;
+                break;
+            case "2022-08":
+                valorIPEA = 176.87;
+                break;
+            case "2022-09":
+                valorIPEA = 177.34;
+                break;
+            case "2022-10":
+                valorIPEA = 178.46;
+                break;
+            case "2022-11":
+                valorIPEA = 179,85;
+                break;
+            case "2022-12":
+                valorIPEA = 181.42;
+                break;
+            case "2023-01":
+                valorIPEA = 182.34;
+                break;
+            case "2023-02":
+                valorIPEA = 183.16;
+                break;
+            case "2023-03":
+                valorIPEA = 183.34;
+                break;
+            case "2023-04":
+                valorIPEA = 183.20;
+                break;
+            case "2023-05":
+                valorIPEA = 182.57;
+                break;
+            case "2023-06":
+                valorIPEA = 182.03;
+                break;
+            case "2023-07":
+                valorIPEA = 181.97;
+                break;
+            case "2023-08":
+                valorIPEA = 181.85;
+                break;
+            case "2023-09":
+                valorIPEA = 181.93;
+                break;
+            case "2023-10":
+                valorIPEA = 182.27;
+                break;
+            case "2023-11":
+                valorIPEA = 182.84;
+                break;
+            case "2023-12":
+                valorIPEA = 183.54;
+                break;
+            case "2024-01":
+                valorIPEA = 184.80;
+                break;
+            case "2024-02":
+                valorIPEA = 186.29;
+                break;
+            case "2024-03":
+                valorIPEA = 186.84;
+                break;
+            case "2024-04":
+                valorIPEA = 187.99;
+                break;
+            case "2024-05":
+                valorIPEA = 189.44;
+                break;
+            case "2024-06":
+                valorIPEA = 190.72;
+                break;
+            case "2024-07":
+                valorIPEA = 191.93;
+                break;
+        }
+        console.log(valorIPEA);
+        let valorAtualIPEA = 191.93;
+        let divisãoIPEA = valorAtualIPEA / valorIPEA;
+        let valorInput = document.getElementById("idvalor").value;
+        let valorCorrigido = valorInput * divisãoIPEA;
+        console.log(valorCorrigido);
+        let resultadoFinal = document.getElementById("idresultado");
+        resultadoFinal.innerText = valorCorrigido
+    }
+    
+</script>
+</html>
